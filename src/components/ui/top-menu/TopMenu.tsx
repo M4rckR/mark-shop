@@ -7,7 +7,7 @@ import { useUIStore } from "@/store/ui/ui-store"
 export const TopMenu = () => {
   const openSideMenu = useUIStore(state => state.openSideMenu)
   return (
-    <nav className="flex justify-between items-center w-full container mx-auto max-w-8xl px-4"> 
+    <nav className="flex justify-between items-center w-full container mx-auto max-w-7xl px-4"> 
         {/* Logo */}
         <div>
             <Link href={"/"}>

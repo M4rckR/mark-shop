@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { inter, titleFont } from "@/config/fonts";
-import { TopMenu } from "@/components";
+import { Sidebar, TopMenu } from "@/components";
 
 export const metadata: Metadata = {
   title: "Teslo | Shop",
@@ -17,9 +17,17 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${titleFont.variable} antialiased`}
+        style={{ overflowX: 'hidden' }}
         suppressHydrationWarning
       >
-        {children}
+        <main className="min-h-screen">
+              <TopMenu />
+              <Sidebar />
+        
+              <div className="container mx-auto max-w-7xl px-4">
+               {children}
+              </div>
+              </main>
       </body>
     </html>
   );
